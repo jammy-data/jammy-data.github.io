@@ -2,7 +2,7 @@
 title: My projects
 permalink: /myprojects/
 header:
- image: "/images/pfeiffer.jpg"
+ image: "/images/Manhattan.jpg"
 ---
 
 This page displays my portfolio of projects completed during my PhD in data analytics and society.

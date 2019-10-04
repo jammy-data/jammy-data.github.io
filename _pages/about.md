@@ -2,8 +2,10 @@
 title: "About me"
 permalink: /about/
 header:
- image: "/images/ed.jpg"
+ image: "/images/ed2.jpg"
 ---
+
+<img align="center" src="https://github.com/jammy-data/jammy-data.github.io/raw/master/images/ed.jpg" width="500" height="500" />
 
 I am a first year MSc/PhD student studying data analytics and society at the University of liverpool.
 
