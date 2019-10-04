@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "James Murphy"
-  avatar           :  "/images/me.jpg.jpg"
+  avatar           :  "/images/me.jpg"
   bio              : "Here I will display my portfolio of
   work associated with my MSc/PhD Data analytics programme."
   location         : "Liverpool"
