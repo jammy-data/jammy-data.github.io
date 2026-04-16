@@ -1,0 +1,43 @@
+---
+layout: base.njk
+title: Projects
+permalink: /projects/
+---
+<section class="panel reveal">
+  <h1>Projects</h1>
+  <p>A growing list of work, experiments, and production builds.</p>
+</section>
+
+{% if collections.projectTags.length %}
+  <section class="panel reveal">
+    <h2>Browse by Keyword</h2>
+    <div class="chip-row">
+      {% for tag in collections.projectTags %}
+        <a class="chip chip-link" href="{{ tag.url }}">{{ tag.name }} ({{ tag.count }})</a>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
+
+<section class="project-grid reveal">
+  {% for project in collections.projects %}
+    {% set projectTags = project.data.keywords or project.data.stack or [] %}
+    <article class="project-card">
+      <h2>{{ project.data.title }}</h2>
+      <p>{{ project.data.summary }}</p>
+      {% if projectTags.length %}
+        <div class="chip-row">
+          {% for keyword in projectTags %}
+            <a class="chip chip-link" href="/projects/tags/{{ keyword | keywordSlug }}/">{{ keyword }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ project.url }}">Details</a>
+        {% if project.data.repo %}
+          <a class="btn btn-ghost" href="{{ project.data.repo }}" target="_blank" rel="noreferrer">Repository</a>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</section>

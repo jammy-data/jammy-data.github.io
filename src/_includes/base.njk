@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if title %}{{ title }} | {% endif %}{{ site.siteName }}</title>
+    <meta name="description" content="{{ site.shortBio }}">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <header class="site-header">
+      <a class="brand" href="/">
+        {% if site.logoPath %}
+          <img src="{{ site.logoPath }}" alt="{{ site.siteName }} logo" class="brand-logo">
+        {% endif %}
+        <span>{{ site.siteName }}</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a></li>
+          <li><a href="/projects/" {% if page.url == "/projects/" %}aria-current="page"{% endif %}>Projects</a></li>
+          <li><a href="/cv/" {% if page.url == "/cv/" %}aria-current="page"{% endif %}>CV</a></li>
+          <li><a href="/about/" {% if page.url == "/about/" %}aria-current="page"{% endif %}>About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      {{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+      <p>{{ site.fullName }}. Built with Eleventy.</p>
+    </footer>
+
+    <script src="/assets/js/site.js" defer></script>
+  </body>
+</html>

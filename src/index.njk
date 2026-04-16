@@ -1,0 +1,67 @@
+---
+layout: base.njk
+title: Home
+permalink: /
+---
+<section class="hero reveal hero-layout">
+  <div>
+    <p class="eyebrow">Personal Site</p>
+    <h1>{{ site.fullName }}</h1>
+    <p class="hero-tagline">{{ site.tagline }}</p>
+    <p class="hero-copy">{{ site.shortBio }}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/projects/">View Projects</a>
+      <a class="btn btn-ghost" href="/cv/">Open CV</a>
+      <a class="btn btn-ghost" href="/about/">About Me</a>
+    </div>
+  </div>
+
+  {% if site.headshotPath %}
+    <div class="hero-media">
+      <img class="avatar" src="{{ site.headshotPath }}" alt="Portrait of {{ site.fullName }}">
+    </div>
+  {% endif %}
+</section>
+
+<section class="panel reveal">
+  <h2>What I Work On</h2>
+  <div class="chip-row">
+    {% if site.focusAreas and site.focusAreas.length %}
+      {% for area in site.focusAreas %}
+        {% if area.label %}
+          {% set areaLabel = area.label %}
+          {% set areaSlug = area.slug or (area.label | keywordSlug) %}
+        {% else %}
+          {% set areaLabel = area %}
+          {% set areaSlug = area | keywordSlug %}
+        {% endif %}
+        <a class="chip chip-link" href="/projects/tags/{{ areaSlug }}/">{{ areaLabel }}</a>
+      {% endfor %}
+    {% else %}
+      {% for tag in collections.projectTags | slice(0, 8) %}
+        <a class="chip chip-link" href="{{ tag.url }}">{{ tag.name }}</a>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+
+<section class="panel reveal">
+  <h2>Featured Projects</h2>
+  <div class="project-grid">
+    {% for project in collections.projects | slice(0, 3) %}
+      {% set projectTags = project.data.keywords or project.data.stack or [] %}
+      <article class="project-card">
+        <h3>{{ project.data.title }}</h3>
+        <p>{{ project.data.summary }}</p>
+        {% if projectTags.length %}
+          <div class="chip-row">
+            {% for keyword in projectTags %}
+              <a class="chip chip-link" href="/projects/tags/{{ keyword | keywordSlug }}/">{{ keyword }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <a class="card-link" href="{{ project.url }}">Read more</a>
+      </article>
+    {% endfor %}
+  </div>
+</section>

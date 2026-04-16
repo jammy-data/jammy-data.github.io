@@ -1,0 +1,40 @@
+---
+layout: base.njk
+pagination:
+  data: collections.projectTags
+  size: 1
+  alias: tag
+permalink: "/projects/tags/{{ tag.slug }}/"
+eleventyComputed:
+  title: "Keyword: {{ tag.name }}"
+---
+<section class="panel reveal">
+  <h1>{{ tag.name }}</h1>
+  <p>{{ tag.count }} project{% if tag.count != 1 %}s{% endif %} tagged with this keyword.</p>
+  <div class="hero-actions">
+    <a class="btn btn-ghost" href="/projects/">Back to Projects</a>
+  </div>
+</section>
+
+<section class="project-grid reveal">
+  {% for project in tag.projects %}
+    {% set projectTags = project.data.keywords or project.data.stack or [] %}
+    <article class="project-card">
+      <h2>{{ project.data.title }}</h2>
+      <p>{{ project.data.summary }}</p>
+      {% if projectTags.length %}
+        <div class="chip-row">
+          {% for keyword in projectTags %}
+            <a class="chip chip-link" href="/projects/tags/{{ keyword | keywordSlug }}/">{{ keyword }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ project.url }}">Details</a>
+        {% if project.data.repo %}
+          <a class="btn btn-ghost" href="{{ project.data.repo }}" target="_blank" rel="noreferrer">Repository</a>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</section>
