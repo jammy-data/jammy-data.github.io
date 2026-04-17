@@ -5,7 +5,7 @@
   "description": "Personal site and portfolio for jammy-data.github.io",
   "scripts": {
     "dev": "eleventy --serve",
-    "build": "eleventy",
+    "build": "npm run clean && eleventy",
     "clean": "rm -rf _site"
   },
   "author": "James Murphy",

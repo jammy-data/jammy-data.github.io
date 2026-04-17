@@ -1,4 +1,4 @@
-Place your CV file here as: cv.pdf
+Place your CV file here as: CV.pdf
 
-Path expected by the site: src/files/cv.pdf
-Public URL after build: /files/cv.pdf
+Path expected by the site: src/files/CV.pdf
+Public URL after build: /files/CV.pdf
