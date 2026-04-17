@@ -23,10 +23,9 @@ To support this effort, IFP collects 3D scans of streets, capturing features suc
 
 The challenge is to process these point clouds and use a combination of machine learning, deep learning, and geometric techniques to automatically identify and distinguish streets from sidewalks - a task more complex than it may initially seem.
 
-## Why It Matters
+## Collaborations/Acknowledgements 
 
-Explain the value in clear terms.
+A huge thank you to [**IFP**](https://ifpedestrians.org) for their hard work in collecting and providing the data, and their continued support throughout the project.
 
-## Next Steps
+Thank you to students at rMIT for their collaboration in this project and for being patient with me while I navigate the trials and tribulations of being a project advisor.
 
-List upcoming improvements.
