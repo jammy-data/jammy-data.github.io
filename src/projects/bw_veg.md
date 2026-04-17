@@ -11,6 +11,7 @@ keywords:
   - Remote Sensing
   - Geospatial Analysis
   - Change analysis
+  - Earth Observation
 date: 2026-04-17
 repo: https://github.com/jammy-data/
 ---

@@ -1,18 +1,18 @@
 {
   "siteName": "Jammy Data",
   "fullName": "James Murphy",
-  "tagline": "Data Engineering, Geospatial Work, and Practical Web Systems",
-  "shortBio": "I build clean data workflows and useful products with a focus on clarity, reliability, and real-world impact.",
-  "logoPath": "",
+  "tagline": "Earth Observation and Geospatial Data Specialist",
+  "shortBio": "Working towards impactful and reproducible solutions, and real-world impact.",
+  "logoPath": "/assets/images/logo-mark.png",
   "headshotPath": "/assets/images/headshot.png",
   "focusAreas": [
     { "label": "Data Pipelines", "slug": "data-pipelines" },
     { "label": "Geospatial Analysis", "slug": "geospatial-analysis" },
     { "label": "Automation", "slug": "automation" },
-    { "label": "Cloud Workflows", "slug": "cloud-workflows" }
+    { "label": "Earth Observation", "slug": "earth-observation" }
   ],
   "email": "james.murphy@bsc.es",
   "github": "https://github.com/jammy-data",
-  "linkedin": "https://www.linkedin.com/in/your-profile",
+  "linkedin": "https://www.linkedin.com/in/james-murphy-363623111",
   "cvPath": "/files/CV.pdf"
 }
