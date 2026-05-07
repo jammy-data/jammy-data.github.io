@@ -23,8 +23,15 @@ permalink: /projects/
   {% for project in collections.projects %}
     {% set projectTags = project.data.keywords or project.data.stack or [] %}
     <article class="project-card">
-      <h2>{{ project.data.title }}</h2>
-      <p>{{ project.data.summary }}</p>
+      <a class="project-thumb-link" href="{{ project.url }}" aria-label="Open {{ project.data.title }}">
+        {% if project.data.thumbnail %}
+          <img class="project-thumb" src="{{ project.data.thumbnail }}" alt="Thumbnail for {{ project.data.title }}" loading="lazy" decoding="async">
+        {% else %}
+          <div class="project-thumb project-thumb-fallback" aria-hidden="true"></div>
+        {% endif %}
+      </a>
+      <h2 class="project-title">{{ project.data.title }}</h2>
+      <p class="project-summary">{{ project.data.summary }}</p>
       {% if projectTags.length %}
         <div class="chip-row">
           {% for keyword in projectTags %}

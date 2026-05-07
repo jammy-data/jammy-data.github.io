@@ -26,33 +26,35 @@ permalink: /
 <section class="panel reveal">
   <h2>What I Work On</h2>
   <div class="chip-row">
-    {% if site.focusAreas and site.focusAreas.length %}
-      {% for area in site.focusAreas %}
-        {% if area.label %}
-          {% set areaLabel = area.label %}
-          {% set areaSlug = area.slug or (area.label | keywordSlug) %}
-        {% else %}
-          {% set areaLabel = area %}
-          {% set areaSlug = area | keywordSlug %}
-        {% endif %}
-        <a class="chip chip-link" href="/projects/tags/{{ areaSlug }}/">{{ areaLabel }}</a>
-      {% endfor %}
-    {% else %}
-      {% for tag in collections.projectTags | slice(0, 8) %}
+    {% for tag in collections.projectTags %}
+      {% if loop.index <= 10 %}
         <a class="chip chip-link" href="{{ tag.url }}">{{ tag.name }}</a>
-      {% endfor %}
-    {% endif %}
+      {% endif %}
+    {% endfor %}
   </div>
 </section>
 
 <section class="panel reveal">
   <h2>Featured Projects</h2>
+  {% if collections.featuredProjects.length %}
+    {% set homeProjects = collections.featuredProjects %}
+  {% else %}
+    {% set homeProjects = collections.projects %}
+  {% endif %}
   <div class="project-grid">
-    {% for project in collections.projects | slice(0, 3) %}
+    {% for project in homeProjects %}
+      {% if collections.featuredProjects.length or loop.index <= 3 %}
       {% set projectTags = project.data.keywords or project.data.stack or [] %}
       <article class="project-card">
-        <h3>{{ project.data.title }}</h3>
-        <p>{{ project.data.summary }}</p>
+        <a class="project-thumb-link" href="{{ project.url }}" aria-label="Open {{ project.data.title }}">
+          {% if project.data.thumbnail %}
+            <img class="project-thumb" src="{{ project.data.thumbnail }}" alt="Thumbnail for {{ project.data.title }}" loading="lazy" decoding="async">
+          {% else %}
+            <div class="project-thumb project-thumb-fallback" aria-hidden="true"></div>
+          {% endif %}
+        </a>
+        <h3 class="project-title">{{ project.data.title }}</h3>
+        <p class="project-summary">{{ project.data.summary }}</p>
         {% if projectTags.length %}
           <div class="chip-row">
             {% for keyword in projectTags %}
@@ -62,6 +64,7 @@ permalink: /
         {% endif %}
         <a class="card-link" href="{{ project.url }}">Read more</a>
       </article>
+      {% endif %}
     {% endfor %}
   </div>
 </section>

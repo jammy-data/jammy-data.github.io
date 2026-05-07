@@ -12,6 +12,7 @@ keywords:
   - Automation
 date: 2026-01-20
 repo: https://github.com/jammy-data/lidar_sidewalks
+thumbnail: /assets/images/projects/lidar-classification.svg
 ---
 ## Overview
 

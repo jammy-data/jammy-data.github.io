@@ -28,6 +28,13 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => b.date - a.date);
   });
 
+  eleventyConfig.addCollection("featuredProjects", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/projects/*.md")
+      .filter((project) => project?.data?.featured === true)
+      .sort((a, b) => b.date - a.date);
+  });
+
   eleventyConfig.addCollection("projectTags", function (collectionApi) {
     const projects = collectionApi
       .getFilteredByGlob("src/projects/*.md")

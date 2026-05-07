@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Geographic foundation model coastline thumbnail</title>
+  <desc id="desc">Abstract neural grid over a coastline map motif.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eff7e6" />
+      <stop offset="100%" stop-color="#cfe5d6" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)" />
+  <g stroke="#4c7766" stroke-width="2" opacity="0.35">
+    <path d="M140 120 H1460" />
+    <path d="M140 220 H1460" />
+    <path d="M140 320 H1460" />
+    <path d="M140 420 H1460" />
+    <path d="M140 520 H1460" />
+    <path d="M140 620 H1460" />
+    <path d="M140 720 H1460" />
+    <path d="M240 80 V780" />
+    <path d="M440 80 V780" />
+    <path d="M640 80 V780" />
+    <path d="M840 80 V780" />
+    <path d="M1040 80 V780" />
+    <path d="M1240 80 V780" />
+  </g>
+  <path d="M180,250 C380,210 470,420 670,390 C920,350 930,190 1180,200 C1320,205 1400,250 1440,280 L1440,640 C1360,620 1210,580 1090,600 C900,632 850,736 620,710 C420,688 340,582 180,610 Z" fill="#79c5c6" opacity="0.9" />
+  <path d="M180,420 C350,390 470,550 660,520 C850,490 950,390 1140,410 C1280,425 1365,520 1440,560 L1440,740 C1370,722 1260,692 1120,700 C900,714 810,804 610,790 C410,775 320,696 180,710 Z" fill="#4d9f86" opacity="0.86" />
+  <g fill="#b2ff59">
+    <circle cx="330" cy="290" r="20" />
+    <circle cx="560" cy="460" r="18" />
+    <circle cx="740" cy="355" r="22" />
+    <circle cx="980" cy="260" r="18" />
+    <circle cx="1200" cy="320" r="24" />
+    <circle cx="1300" cy="570" r="20" />
+  </g>
+  <text x="120" y="842" font-size="92" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-weight="700" fill="#122d20">GFM Coastline Analysis</text>
+</svg>

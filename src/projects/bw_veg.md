@@ -14,6 +14,7 @@ keywords:
   - Earth Observation
 date: 2026-04-17
 repo: https://github.com/jammy-data/
+thumbnail: /assets/images/projects/catalunya-beach.svg
 ---
 ## Overview
 

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Catalunya beach width and vegetation thumbnail</title>
+  <desc id="desc">Abstract beach scene with shoreline contours and dune vegetation patches.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8f0ff" />
+      <stop offset="60%" stop-color="#e7f5ff" />
+      <stop offset="100%" stop-color="#f2f8ec" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)" />
+  <path d="M0,620 C280,560 420,680 700,620 C980,560 1140,430 1600,520 L1600,900 L0,900 Z" fill="#e4d6a6" />
+  <path d="M0,680 C260,640 430,760 760,700 C1000,656 1180,544 1600,610 L1600,900 L0,900 Z" fill="#d5c088" opacity="0.9" />
+  <path d="M0,520 C240,480 360,600 620,548 C940,485 1160,350 1600,430 L1600,560 C1160,488 940,620 620,683 C360,735 240,615 0,655 Z" fill="#88d2d4" />
+  <g opacity="0.85">
+    <ellipse cx="290" cy="710" rx="115" ry="54" fill="#6eae65" />
+    <ellipse cx="560" cy="740" rx="136" ry="60" fill="#74b96c" />
+    <ellipse cx="910" cy="700" rx="146" ry="64" fill="#6aa760" />
+    <ellipse cx="1210" cy="750" rx="126" ry="56" fill="#5e9754" />
+  </g>
+  <text x="120" y="836" font-size="88" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-weight="700" fill="#1b3325">Beach Width and Vegetation</text>
+</svg>
